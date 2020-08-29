@@ -22,7 +22,7 @@ router.get("/delete", [auth], (req, res) => {
 });
 
 router.get("/logout", [auth], (req, res) => {
-        delete req.session.user;
+        delete req.session.passport;
         res.redirect("/home");
 });
 
