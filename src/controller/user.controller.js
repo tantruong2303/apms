@@ -54,7 +54,7 @@ module.exports = {
                                 text: "username or password is not correct.",
                         });
 
-                req.session.user = user;
+                req.session.passport = {user};
                 res.status(200).json({
                         status: 200,
                         data: null,
