@@ -1,0 +1,45 @@
+<%- include("./includes/head") %>
+<body>
+        <%- include("./includes/menu") %>
+        <div class="body-test">
+                <div
+                        class="container-fluid d-flex justify-content-center align-items-center min-height-100"
+                        style="min-height: calc(100vh - 60px)"
+                >
+                        <div
+                                class="row row-cols-1 row-cols-md-5 g-4 justify-content-center align-items-center"
+                                style="min-height: inherit"
+                        >
+                                <% for(var i=0; i < residents.length; i++) { %>
+
+                                <div class="col" id="<%= residents[i]._id %>">
+                                        <div class="card">
+                                                <div class="card-body">
+                                                        <h5 class="card-title"><%= residents[i].name %></h5>
+                                                        <p class="card-text">Sex: <%= residents[i].sex %></p>
+                                                        <p class="card-text">Old: <%= residents[i].old %></p>
+                                                        <p class="card-text">Career: <%= residents[i].career %></p>
+                                                        <p class="card-text">House ID: <%= residents[i].houseId %></p>
+                                                        <button
+                                                                type="button"
+                                                                class="btn btn-primary btn__delete"
+                                                                value="<%= residents[i]._id %>"
+                                                        >
+                                                                Delete
+                                                        </button>
+                                                        <a
+                                                                href="<%= `/resident/update/${residents[i]._id}` %>"
+                                                                class="btn btn-primary btn__update"
+                                                        >
+                                                                Update
+                                                        </a>
+                                                </div>
+                                        </div>
+                                </div>
+                                <% } %>
+                        </div>
+                </div>
+        </div>
+</body>
+<%- include("./includes/foot") %>
+<script src="/script/deleteResident.js"></script>

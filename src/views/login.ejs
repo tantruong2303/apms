@@ -1,0 +1,64 @@
+<%- include("./includes/head") %>
+<body>
+        <%- include("./includes/menu") %>
+        <div class="container-fluid d-flex justify-content-center align-items-center min-height-100">
+                <div class="container-form">
+                        <form id="login-form" style="min-width: 350px;">
+                          
+                                <h1 class="text-center mb-4">Sign In</h1>
+
+                                <div class="form-outline mb-4">
+                                        <input type="text" id="username" class="form-control" value="" />
+                                        <label class="form-label" for="username">Username</label>
+                                </div>
+
+                           
+                                <div class="form-outline mb-4">
+                                        <input type="password" id="password" class="form-control" value="" />
+                                        <label class="form-label" for="password">Password</label>
+                                </div>
+
+                                
+                                <div class="row mb-4">
+                                        <div class="col text-left">
+                                                <a href="/user/changePassword">Change Password</a>
+                                        </div>
+
+                                        <div class="col text-right">
+                                                <a href="/user/register">Register Instead</a>
+                                        </div>
+                                </div>
+
+                        
+                                <button type="submit" class="btn btn-primary btn-block mb-4">
+                                        Sign in
+                                </button>
+
+                                
+                                <div class="text-center">
+                                        <p>Or sign up with:</p>
+                                        <a href="/user/auth/facebook">
+                                          <button type="button" class="btn btn-primary btn-floating mx-1">
+                                                  <i class="fab fa-facebook-f"></i>
+                                          </button>
+                                        </a>
+                                        <a href="/user/auth/google">
+                                          <button type="button" class="btn btn-primary btn-floating mx-1">
+                                                  <i class="fab fa-google"></i>
+                                          </button>
+                                        </a>
+
+                                        <button type="button" class="btn btn-primary btn-floating mx-1">
+                                                <i class="fab fa-twitter"></i>
+                                        </button>
+
+                                        <button type="button" class="btn btn-primary btn-floating mx-1">
+                                                <i class="fab fa-github"></i>
+                                        </button>
+                                </div>
+                        </form>
+                </div>
+        </div>
+</body>
+<%- include("./includes/foot") %>
+<script src="/script/login.js"></script>

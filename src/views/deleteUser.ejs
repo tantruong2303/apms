@@ -1,0 +1,27 @@
+<%- include("./includes/head") %>
+<body>
+        <%- include("./includes/menu") %>
+        <div class="container-fluid d-flex justify-content-center align-items-center min-height-100">
+                <div class="container-form">
+                        <form id="delete-form" style="min-width: 350px;">
+                                <h1 class="text-center mb-4">Delete Account</h1>
+
+                                <div class="form-outline mb-4">
+                                        <input type="password" id="password" class="form-control" value="" />
+                                        <label class="form-label" for="password">Password</label>
+                                </div>
+
+                                <div class="form-outline mb-4">
+                                        <input type="password" id="confirm" class="form-control" value="" />
+                                        <label class="form-label" for="confirm">Confirm</label>
+                                </div>
+
+                                <button type="submit" class="btn btn-primary btn-block mb-4">
+                                        Submit
+                                </button>
+                        </form>
+                </div>
+        </div>
+</body>
+<%- include("./includes/foot") %>
+<script src="/script/deleteUser.js"></script>

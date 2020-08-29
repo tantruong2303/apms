@@ -1,0 +1,75 @@
+<%- include("./includes/head") %>
+<body>
+        <%- include("./includes/menu") %>
+        <div class="container-fluid d-flex justify-content-center align-items-center min-height-100">
+                <div class="container-form">
+                        <form id="update-resident-form" style="min-width: 350px">
+                                <h1 class="text-center mb-4">Update Resident</h1>
+                                <div class="form-outline mb-4">
+                                        <input
+                                                type="text"
+                                                id="name"
+                                                class="form-control"
+                                                value="<%= resident.name %>"
+                                        />
+                                        <label class="form-label" for="name">Full name</label>
+                                </div>
+                                <div class="row">
+                                        <div class="col-md-6">
+                                                <select id="sex" class="custom-select">
+                                                        <% if (resident.sex === "Male") { %>
+                                                        <option value="true" selected>Male</option>
+                                                        <option value="false">Female</option>
+                                                        <% } else {%>
+                                                        <option value="true">Male</option>
+                                                        <option value="false" selected>Female</option>
+                                                        <% } %>
+                                                </select>
+                                        </div>
+                                        <div class="col-md-6">
+                                                <div class="form-outline mb-4">
+                                                        <input
+                                                                type="number"
+                                                                id="old"
+                                                                class="form-control"
+                                                                value="<%= resident.old %>"
+                                                        />
+                                                        <label class="form-label" for="old">Old</label>
+                                                </div>
+                                        </div>
+                                </div>
+
+                                <div class="form-outline mb-4">
+                                        <input
+                                                type="text"
+                                                id="career"
+                                                class="form-control"
+                                                value="<%= resident.career %> "
+                                        />
+                                        <label class="form-label" for="career">Career</label>
+                                </div>
+
+                                <div class="form-outline mb-4">
+                                        <input
+                                                type="text"
+                                                id="houseId"
+                                                class="form-control"
+                                                value="<%= resident.houseId %> "
+                                        />
+                                        <label class="form-label" for="houseId">House ID</label>
+                                </div>
+
+                                <button
+                                        id="id"
+                                        value="<%= resident._id %>"
+                                        type="submit"
+                                        class="btn btn-primary btn-block mb-4"
+                                >
+                                        Submit
+                                </button>
+                        </form>
+                </div>
+        </div>
+</body>
+<%- include("./includes/foot") %>
+<script src="/script/putUpdateResident.js"></script>
